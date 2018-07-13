@@ -34,13 +34,13 @@ This Application Profile follows the generic MAP template created by the Metadat
 
 | Field | Schema Mapping | Domain  | Expected Value | Definition | Obligation | Usage Notes | Source | Remediation Notes| Exposure / Other Representation |
 | ------------- |:-------------:| :-----:| :-------------:| :--------------:|:----------:|:------:|:----:|:---:|:---:|
-| Org City      | schema.org/City | City | string | a city, town, or municipality | {0, 1}| | Scopus | may be incorrect | | 
+| Org City      | schema.org/City | City, Country | string | a city, town, or municipality | {0, 1}| | Scopus | may be incorrect | | 
 | Org Country   | schema.org/Country |   City, Country | string | a country  | {1, 1} | | Scopus  | may be incorrect | name field in Dim_Country| 
 | Org State     | schema.org/State |  State | string | a state or province  | {0, 1} | | Scopus | may be incorrect | | 
 | Org Postal Code | schema.org/postalCode | City | string | the postal code | {0, 1} | | Scopus | may be incorrect | |
 | Dim_Country.iso3c |schema.org/addressCountry | City, Country | 3-letter string | the ISO 3166-1 alpha-3 country code | {0, 1} | Providers are recommended to use the two letter code whenever possible | Worldbank |  |iso3c field in Dim_Country|
 | Dim_Country.iso2c |schema.org/addressCountry | City, Country | 2-letter string | the ISO 3166-1 alpha-2 country code | {1, 1} | | Worldbank |  |iso2c field in Dim_Country | 
-| Dim_Country.capitalCity |
+| Dim_Country.capitalCity | schema.org/City | City, Country | string | a city, town, or municipality | 
 | City Key |
 | Dim_Country.Country Key |
 | is Oak Ridge |
@@ -48,13 +48,13 @@ This Application Profile follows the generic MAP template created by the Metadat
 |Dim_Country | schema.org/Country|
 |------------|-------------------|
 
-| Field    | Schema Mapping           | Domain  | Expected Value | Definition | Obligation | Usage Notes | Source | Remediation Notes| Exposure / Other Representation |
+| Field | Schema Mapping | Domain  | Expected Value | Definition | Obligation | Usage Notes | Source | Remediation Notes| Exposure / Other Representation |
 | ------------- |:-------------:| :-----:| :-------------:| :--------------:|:----------:|:------:|:----:|:---:|:---:|
-| iso3c|
-|iso2c|
-|name |
-|region|
-|capitalCity|
+|iso3c| schema.org/addressCountry | Country, City | 3-letter string | the ISO 3166-1 alpha-3 country code | {0, 1}
+|iso2c| schema.org/addressCountry | Country, City | 2-letter string | the ISO 3166-1 alpha-2 country code | {1, 1}
+|name | schema.org/Country | Country, City | string | name of the country | 
+|region| schema.org/AdministrativeArea | Country | string | a geographical region | {0, 1} | | Scopus | May be incorrect | |
+|capitalCity| schema.org/City | Country, City | string | a city, town, or municipality | {0, 1} | | Scopus | May be incorrect | Dim_City|
 |incomeLevel|
 |lendingType|
 |latitude|
