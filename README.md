@@ -68,6 +68,19 @@ This Application Profile follows the generic MAP template created by the Metadat
 
 | Field    | Schema Mapping           | Domain  | Expected Value | Definition | Obligation | Usage Notes | Source | Remediation Notes| Exposure / Other Representation |
 | ------------- |:-------------:| :-----:| :-------------:| :--------------:|:----------:|:------:|:----:|:---:|:---:|
+|Org EID|
+|Org Abbreviation|
+|Org Name|
+|Org Sort Name|
+|Org Address|
+|Org City|
+|Org Country|
+|Org State|
+|Org Postal Code|
+|City Key|
+|Country Key|
+|Clean Org name|
+|Clean Org EID|
 
 
 |Dim_Person_Identifiers | ADMS |
@@ -75,14 +88,20 @@ This Application Profile follows the generic MAP template created by the Metadat
 
 | Field    | Schema Mapping           | Domain  | Expected Value | Definition | Obligation | Usage Notes | Source | Remediation Notes| Exposure / Other Representation |
 | ------------- |:-------------:| :-----:| :-------------:| :--------------:|:----------:|:------:|:----:|:---:|:---:|
-
+|ORNLBadge|
+|Orcid|
+|Elsevier ID|
+|Person_Bio_Durable_Key|
+|Creation Date|
+|Modified Date|
+|Person Bio Key|
 
 |Dim_ORNL_Organization | ORG |
 |------------|-------------------|
 
 | Field    | Schema Mapping           | Domain  | Expected Value | Definition | Obligation | Usage Notes | Source | Remediation Notes| Exposure / Other Representation |
 | ------------- |:-------------:| :-----:| :-------------:| :--------------:|:----------:|:------:|:----:|:---:|:---:|
-
+|
 
 |Dim_Group | ORG |
 |------------|-------------------|
